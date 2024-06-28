@@ -1,0 +1,24 @@
+// Smallest number with at least n trailing zeroes in factorial
+public class sorting19 {
+    public static int findSum(int n) {
+        int num = 1;
+        int cnt = 0;
+        while (true) {
+            int temp = num;
+            while (temp % 5 == 0) {
+                cnt++;
+                temp /= 5;
+            }
+            if (cnt >= n) {
+                return num;
+            }
+            num++;
+        }
+    }
+
+    public static void main(String args[]) {
+        int n = 6;
+        System.out.println(findSum(n));
+
+    }
+}
